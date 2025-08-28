@@ -1,0 +1,15 @@
+import { InlineMath, BlockMath } from 'react-katex'
+
+export default function Step1() {
+  return (
+    <>
+      <h2>Gradient Descent Intuition</h2>
+      <p>
+        We update parameters with <InlineMath math={'w := w - \\eta \\nabla L(w)'} /> where <InlineMath math={'\\eta'} /> is the learning rate.
+      </p>
+      <p>
+        The chart on the right shows a loss-like curve; notice how the shape changes slightly per step.
+      </p>
+    </>
+  )
+}

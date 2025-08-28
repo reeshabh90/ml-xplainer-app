@@ -1,0 +1,34 @@
+{
+  "name": "ml-xplainer-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "new-step": "node scripts/new-step.js"
+  },
+  "dependencies": {
+    "@next/mdx": "^13.4.6",
+    "d3": "^7.9.0",
+    "framer-motion": "^12.23.12",
+    "katex": "^0.16.8",
+    "next": "13.5.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-katex": "^3.0.2",
+    "react-scrollama": "^2.0.4"
+  },
+  "devDependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/mdx": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/node": "24.3.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.4.12",
+    "typescript": "^5.5.1"
+  }
+}
