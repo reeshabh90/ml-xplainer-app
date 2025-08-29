@@ -1,28 +1,24 @@
 import React from 'react';
+import AnimationPane from '../explainers/explainer1/AnimationPane';
+import { LayoutProps } from "../../models/propmodel";
 
-interface SideBySideLayoutProps {
-  left: React.ReactNode;
-  right: React.ReactNode;
-  leftClassName?: string;
-  rightClassName?: string;
-  containerClassName?: string;
-}
-
-const SideBySideLayout: React.FC<SideBySideLayoutProps> = ({
-  left,
-  right,
-  leftClassName = '',
-  rightClassName = '',
-  containerClassName = '',
-}) => (
-  <div className={`my-40 grid grid-cols-1 md:grid-cols-2 gap-6 ${containerClassName}`}>
-    <div className={`prose max-w-none p-6 rounded-xl border shadow-sm transition-colors duration-300 ${leftClassName}`}>
-      {left}
-    </div>
-    <div className={`flex items-start justify-center pt-6 ${rightClassName}`}>
-      {right}
-    </div>
-  </div>
+const SideBySideLayout = React.forwardRef<HTMLDivElement, LayoutProps>(
+  ({ stepIndex, currentIndex, content: Content }, ref) => {
+    return (
+      <div className="my-40" ref={ref}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div
+            className={`prose max-w-none p-6 rounded-xl border shadow-sm transition-colors duration-300 ${stepIndex === currentIndex ? 'bg-yellow-50' : 'bg-white'}`}
+          >
+            <Content />
+          </div>
+          <div className="flex items-start justify-center pt-6">
+            {stepIndex === currentIndex && <AnimationPane stepIndex={stepIndex} />}
+          </div>
+        </div>
+      </div>
+    );
+  }
 );
 
 export default SideBySideLayout;
