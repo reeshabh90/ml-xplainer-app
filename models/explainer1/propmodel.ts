@@ -8,9 +8,15 @@ export const Layout = {
 
 export type LayoutType = typeof Layout[keyof typeof Layout];
 
+export interface SideBySideStep {
+    component: ComponentType;
+    animation: AnimationType;
+}
+
 export interface SideBySideLayoutConfig {
     type: typeof Layout.sidebyside;
-    animation: AnimationType;
+    animation?: AnimationType;
+    steps?: SideBySideStep[];
 }
 
 export interface TextLayoutConfig {
@@ -20,14 +26,15 @@ export interface TextLayoutConfig {
 export type LayoutConfig = SideBySideLayoutConfig | TextLayoutConfig;
 
 export interface StepConfig {
-    component: ComponentType;
+    component?: ComponentType;
     layout: LayoutConfig;
 }
 
 export interface LayoutProps {
-  stepIndex: number;
-  currentIndex: number;
-  content: ComponentType;
-  animation?: AnimationType;
+    stepIndex: number;
+    currentIndex: number;
+    content?: ComponentType;
+    animation?: AnimationType;
+    steps?: SideBySideStep[];
 }
 

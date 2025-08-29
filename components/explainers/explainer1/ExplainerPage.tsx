@@ -31,7 +31,9 @@ const ExplainerPage = ({ steps }: ExplainerPageProps) => {
                     // === SIDE-BY-SIDE LAYOUT ===
                     return (
                         <Step data={i} key={i}>
-                            <SideBySideLayout stepIndex={i} currentIndex={stepIndex} content={Content} animation={step.layout.type === Layout.sidebyside ? step.layout.animation : undefined} />
+                            <SideBySideLayout stepIndex={i}
+                                currentIndex={stepIndex} content={Content}                                
+                                steps={step.layout.type === Layout.sidebyside ? step.layout.steps : undefined} />
                         </Step>
                     );
                 })}
