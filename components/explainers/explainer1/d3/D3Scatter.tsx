@@ -2,15 +2,15 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
-type Props = { step: number };
+type Props = {};
 
-export default function D3Scatter({ step }: Props) {
+export default function D3Scatter() {
     const ref = useRef<SVGSVGElement | null>(null);
     useEffect(() => {
         const svg = d3.select(ref.current);
         svg.selectAll('*').remove();
         const width = 600, height = 220, margin = { top: 20, right: 20, bottom: 30, left: 40 };
-        const data = d3.range(25).map(i => ({ x: Math.random() * 10, y: Math.random() * 10 + step * 0.5 }));
+        const data = d3.range(25).map(i => ({ x: Math.random() * 10, y: Math.random() * 10 }));
         const x = d3.scaleLinear().domain([0, 10]).range([margin.left, width - margin.right]);
         const y = d3.scaleLinear().domain([0, 12]).range([height - margin.bottom, margin.top]);
 
@@ -24,6 +24,6 @@ export default function D3Scatter({ step }: Props) {
             .attr('r', 4)
             .attr('fill', '#059669')
             .attr('opacity', 0.9);
-    }, [step]);
+    }, []);
     return <svg ref={ref} className="w-full h-[220px]" />;
 }

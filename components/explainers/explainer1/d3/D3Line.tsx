@@ -2,9 +2,9 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
-type Props = { step: number };
+type Props = {};
 
-export default function D3Line({ step }: Props) {
+export default function D3Line() {
     const ref = useRef<SVGSVGElement | null>(null);
 
     useEffect(() => {
@@ -19,7 +19,7 @@ export default function D3Line({ step }: Props) {
             .y((d: any) => y(d.y))
             .curve(d3.curveMonotoneX);
 
-        const base = d3.range(11).map(i => ({ x: i, y: Math.max(0, Math.sin(i / 2 + step) * 4 + 5 + step) }));
+        const base = d3.range(11).map(i => ({ x: i, y: Math.max(0, Math.sin(i / 2) * 4 + 5) }));
 
         svg.attr('viewBox', `0 0 ${width} ${height}`);
         svg.append('g').attr('transform', `translate(0,${height - margin.bottom})`)
@@ -41,7 +41,7 @@ export default function D3Line({ step }: Props) {
             .attr('r', 3)
             .attr('fill', '#1d4ed8');
 
-    }, [step]);
+    }, []);
 
     return <svg ref={ref} className="w-full h-[220px]" />;
 }
