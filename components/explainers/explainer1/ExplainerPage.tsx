@@ -18,7 +18,7 @@ const ExplainerPage = ({ steps }: ExplainerPageProps) => {
 
     return (
         <div className="min-h-screen w-full bg-gray-50 p-6">
-            <Scrollama onStepEnter={onStepEnter} offset={0.6}>
+            <Scrollama onStepEnter={onStepEnter} offset={0.5}>
                 {steps.map((step, i) => {
                     const Content = step.component;
                     if (step.layout.type === Layout.text) {
