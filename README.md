@@ -1,6 +1,6 @@
 # ML Xplainer
 
-An interactive web application for explaining concepts through scroll-based animations and visualizations.
+An interactive web application for explaining concepts through scroll-based animations and visualizations. It is inspired from AWS MLU Explain.
 
 ![Demo](assets\Animation.gif)
 
