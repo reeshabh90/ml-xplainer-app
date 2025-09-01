@@ -10,36 +10,12 @@ import { Animation } from '../../../models/explainer1/animationtype';
 const ExplainerPage = dynamic(() => import('../../../components/explainers/explainer1/ExplainerPage'));
 
 const steps: StepConfig[] = [
-
-    // {
-    //     component: Explainer1Step1,
-    //     layout: {
-    //         type: Layout.sidebyside,
-    //         animation: Animation.line
-    //     } satisfies SideBySideLayoutConfig
-    // },
-    // {
-    //     component: Explainer1Step2,
-    //     layout: {
-    //         type: Layout.sidebyside,
-    //         animation: Animation.scatter
-    //     } satisfies SideBySideLayoutConfig
-    // },
-    // {
-    //     component: Explainer1Step3,
-    //     layout: {
-    //         type: Layout.sidebyside,
-    //         animation: Animation.bar
-    //     } satisfies SideBySideLayoutConfig
-    // },
-    // {
-    //     component: Explainer1Step4,
-    //     layout: {
-    //         type: Layout.sidebyside,
-    //         animation: Animation.composite
-    //     } satisfies SideBySideLayoutConfig
-    // },
-
+    {
+        component: Explainer1Step5,
+        layout: {
+            type: Layout.text
+        } satisfies TextLayoutConfig
+    },
     {
         layout: {
             type: Layout.sidebyside,
@@ -51,12 +27,14 @@ const steps: StepConfig[] = [
             ]
         } satisfies SideBySideLayoutConfig
     },
-        {
+
+    {
         component: Explainer1Step5,
         layout: {
             type: Layout.text
         } satisfies TextLayoutConfig
     },
+
 
 ];
 

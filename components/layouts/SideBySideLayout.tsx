@@ -21,8 +21,8 @@ const SideBySideLayout = React.forwardRef<HTMLDivElement, LayoutProps>(
     // If this layout has nested steps, render the enhanced version
     if (steps && steps.length > 0) {
       return (
-        <div className="my-20" ref={ref}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 min-h-[80vh]">
+        <div ref={ref}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 min-h-[80vh]">
             {/* Left side - Scrollable content */}
             <div className="relative">
               {stepIndex === currentIndex && (
@@ -33,7 +33,7 @@ const SideBySideLayout = React.forwardRef<HTMLDivElement, LayoutProps>(
                       <Step data={i} key={i}>
                         <div className="min-h-[80vh] flex items-center">
                           <div
-                            className={`prose max-w-none p-6 rounded-xl border shadow-sm transition-colors duration-300 w-full ${i === currentSubStep ? 'bg-yellow-50' : 'bg-white'
+                            className={`prose max-w-none p-8 rounded-xl border shadow-sm transition-colors duration-300 w-full ${i === currentSubStep ? 'bg-yellow-50' : 'bg-white'
                               }`}
                           >
                             <SubContent />
@@ -47,7 +47,7 @@ const SideBySideLayout = React.forwardRef<HTMLDivElement, LayoutProps>(
               {/* Show placeholder when layout is not active (only if no nested steps) */}
               {stepIndex !== currentIndex && Content && (
                 <div className="min-h-[80vh] flex items-center">
-                  <div className="prose max-w-none p-6 rounded-xl border shadow-sm bg-white w-full">
+                  <div className="prose max-w-none p-8 rounded-xl border shadow-sm bg-white w-full">
                     <Content />
                   </div>
                 </div>
@@ -55,8 +55,8 @@ const SideBySideLayout = React.forwardRef<HTMLDivElement, LayoutProps>(
             </div>
 
             {/* Right side - Fixed animation pane */}
-            <div className="flex items-start justify-center pt-6">
-              <div className="sticky top-6">
+            <div className="flex items-start justify-center pt-20">
+              <div className="sticky top-8 w-full max-w-lg bg-gray-200 rounded-lg p-4">
                 {stepIndex === currentIndex && steps && (
                   <AnimationPane animation={steps[currentSubStep]?.animation} />
                 )}

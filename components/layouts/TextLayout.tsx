@@ -15,14 +15,10 @@ const TextLayout = React.forwardRef<HTMLDivElement, LayoutProps>(
     return (
       <div
         ref={ref}
-        className={`flex items-center justify-center min-h-[60vh] ${getSpacingClasses()}`}
+        className={`flex items-center justify-center`}
       >
-        <div
-          className={`p-10 rounded-xl border shadow-sm transition-colors duration-300 w-full text-center ${stepIndex === currentIndex ? 'bg-yellow-50' : 'bg-white'}`}
-        >
-          <div className="max-w-4xl mx-auto">
-            <Content />
-          </div>
+        <div className={`prose p-10 rounded-xl w-full text-center max-w-4xl mx-auto`}>
+          <Content />
         </div>
       </div>
     );
