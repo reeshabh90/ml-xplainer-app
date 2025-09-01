@@ -2,6 +2,8 @@
 
 An interactive web application for explaining concepts through scroll-based animations and visualizations.
 
+![Demo](assets\Animation.gif)
+
 ## Overview
 
 ML Xplainer is a modular, extensible platform built with Next.js and TypeScript that creates engaging, interactive explanations of complex concepts. It combines narrative content with synchronized D3.js visualizations in a scroll-driven interface.
