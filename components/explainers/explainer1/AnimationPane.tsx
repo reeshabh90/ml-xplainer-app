@@ -14,7 +14,7 @@ type Props = {
 };
 
 export default function AnimationPane({ animation, media }: Props) {
-    if (media.type && media.url) {
+    if (media && media.type && media.url) {
         if (media.type === 'gif' || media.type === 'image') {
             return (
                 <div className="w-full max-w-xl">
