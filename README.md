@@ -6,7 +6,7 @@ An interactive web application for explaining concepts through scroll-based anim
 
 ## Overview
 
-ML Xplainer is a modular, extensible platform built with Next.js and TypeScript that creates engaging, interactive explanations of complex concepts. It combines narrative content with synchronized D3.js visualizations in a scroll-driven interface.
+ML Xplainer is a modular, extensible platform built with Next.js and TypeScript that creates engaging, interactive explanations of complex concepts. It combines narrative content with synchronized D3.js visualizations or images, gifs or videos in a scroll-driven interface.
 
 ## Key Features
 
@@ -16,29 +16,16 @@ ML Xplainer is a modular, extensible platform built with Next.js and TypeScript 
   - Scatter plots
   - Bar charts
   - Composite visualizations
+
+- **Support for Media** : Easily extensible to support images, videos and gifs along side text.
 - **Modular Architecture**: Easily extensible system for creating new explainers
 - **Mathematical Notation**: KaTeX integration for mathematical equations
-- **Responsive Layouts**: Multiple layout options including side-by-side and text-only
-- **Modern Tech Stack**:
+- **Responsive Layouts**: Two layout options including side-by-side and text-only
+- **Tech Stack**:
   - Next.js with TypeScript
   - Tailwind CSS with Typography plugin
   - MDX for content authoring
   - Framer Motion for animations
-
-## Project Structure
-
-```
-├── components/
-│   ├── explainers/          # Explainer-specific components
-│   │   └── explainer1/      # Components for first explainer
-│   └── layouts/             # Reusable layout components
-├── content/                 # MDX content files
-│   └── explainer1/         # Content steps for first explainer
-├── models/                 # TypeScript type definitions
-├── pages/                 # Next.js pages
-│   └── explainers/       # Dynamic explainer routes
-└── styles/              # Global styles
-```
 
 ## Architecture
 
@@ -47,8 +34,8 @@ ML Xplainer is a modular, extensible platform built with Next.js and TypeScript 
 The application uses a registry-based system for managing different explainers. Each explainer consists of:
 
 1. **Content Steps**: MDX files containing explanatory content
-2. **Animations**: D3.js visualizations that sync with content
-3. **Layout Configuration**: Flexible layouts (side-by-side or text-only)
+2. **Animations**: D3.js visualizations, images, videos or gifs that sync with content
+3. **Layout Configuration**: Flexible layout option (side-by-side or text-only)
 
 ### Component Architecture
 
