@@ -1,12 +1,12 @@
 # ML Xplainer
 
-An interactive web application for explaining concepts through scroll-based animations and visualizations. It is inspired from AWS MLU Explain.
+An interactive scroll-driven web application for explaining concepts through narrative text paired with dynamic visualizations.. It is inspired from AWS MLU Explain.
 
 ![Demo](assets\Animation.gif)
 
 ## Overview
 
-ML Xplainer is a modular, extensible platform built with Next.js and TypeScript that creates engaging, interactive explanations of complex concepts. It combines narrative content with synchronized D3.js visualizations or images, gifs or videos in a scroll-driven interface.
+ML Xplainer is a modular, extensible platform built with Next.js and TypeScript that weaves together narrative content (like text with math equations) and rich, animated visuals (charts, images, GIFs, or videos), allowing users to learn interactively as they scroll.
 
 ## Key Features
 
@@ -19,8 +19,10 @@ ML Xplainer is a modular, extensible platform built with Next.js and TypeScript 
 
 - **Support for Media** : Easily extensible to support images, videos and gifs along side text.
 - **Modular Architecture**: Easily extensible system for creating new explainers
-- **Mathematical Notation**: KaTeX integration for mathematical equations
+- **Mathematical Notation**: KaTeX integration for rendering mathematical equations
 - **Responsive Layouts**: Two layout options including side-by-side and text-only
+  - Side-by-Side Layout – shows content alongside visuals, ideal for immersive scrollytelling.
+  - Text-Only Layout – full-width textual content, perfect for narrative-heavy segments. Tailwind Typography enhances the presentation
 - **Tech Stack**:
   - Next.js with TypeScript
   - Tailwind CSS with Typography plugin
@@ -33,7 +35,7 @@ ML Xplainer is a modular, extensible platform built with Next.js and TypeScript 
 
 The application uses a registry-based system for managing different explainers. Each explainer consists of:
 
-1. **Content Steps**: MDX files containing explanatory content
+1. **Content Steps**: MDX files containing explanatory content. HTML format or markdown format, both are supported.
 2. **Animations**: D3.js visualizations, images, videos or gifs that sync with content
 3. **Layout Configuration**: Flexible layout option (side-by-side or text-only)
 
