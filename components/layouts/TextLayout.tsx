@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutProps } from '../../models/explainer1/propmodel';
+import { LayoutProps } from '../../models/propmodel';
 
 const TextLayout = React.forwardRef<HTMLDivElement, LayoutProps>(
   ({ stepIndex, currentIndex, content: Content }, ref) => {

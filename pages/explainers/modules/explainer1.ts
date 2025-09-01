@@ -4,7 +4,7 @@ import Explainer1Step3 from '../../../content/explainer1/step3.mdx';
 import Explainer1Step4 from '../../../content/explainer1/step4.mdx';
 import Explainer1Step5 from '../../../content/explainer1/step5.mdx';
 import dynamic from 'next/dynamic';
-import { StepConfig, SideBySideLayoutConfig, TextLayoutConfig, Layout } from '../../../models/explainer1/propmodel';
+import { StepConfig, SideBySideLayoutConfig, TextLayoutConfig, Layout } from '../../../models/propmodel';
 import { Animation } from '../../../models/explainer1/animationtype';
 
 const ExplainerPage = dynamic(() => import('../../../components/explainers/ExplainerPage'));

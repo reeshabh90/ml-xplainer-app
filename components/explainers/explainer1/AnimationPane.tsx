@@ -5,13 +5,40 @@ import D3Line from './d3/D3Line';
 import D3Bar from './d3/D3Bar';
 import D3Scatter from './d3/D3Scatter';
 import { AnimationType, Animation } from '../../../models/explainer1/animationtype';
+import { MediaConfig } from '../../../models/propmodel';
 
 
-type Props = { 
+type Props = {
     animation?: AnimationType;
+    media?: MediaConfig
 };
 
-export default function AnimationPane({ animation }: Props) {
+export default function AnimationPane({ animation, media }: Props) {
+    if (media.type && media.url) {
+        if (media.type === 'gif' || media.type === 'image') {
+            return (
+                <div className="w-full max-w-xl">
+                    <img src={media.url} alt={media.title || 'Media'}
+                        className="w-full h-auto rounded-2xl shadow-lg" />
+                </div>
+            );
+        }
+        if (media.type === 'video') {
+            return (
+                <div className="w-full max-w-xl">
+                    <video
+                        src={media.url}
+                        title={media.title || 'Media'} controls
+                        autoPlay
+                        loop
+                        muted
+                        className="w-full h-auto rounded-2xl shadow-lg"
+                    />
+                </div>
+            );
+        }
+    }
+
     if (!animation) return null;
 
     const renderAnimation = () => {

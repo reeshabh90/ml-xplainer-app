@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
 import AnimationPane from '../explainers/explainer1/AnimationPane';
-import { LayoutProps } from '../../models/explainer1/propmodel';
+import { LayoutProps } from '../../models/propmodel';
 
 const SideBySideLayout = React.forwardRef<HTMLDivElement, LayoutProps>(
   ({ stepIndex, currentIndex, content: Content, animation, steps }, ref) => {
