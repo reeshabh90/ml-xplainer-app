@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic';
 import { StepConfig, SideBySideLayoutConfig, TextLayoutConfig, Layout } from '../../../models/explainer1/propmodel';
 import { Animation } from '../../../models/explainer1/animationtype';
 
-const ExplainerPage = dynamic(() => import('../../../components/explainers/explainer1/ExplainerPage'));
+const ExplainerPage = dynamic(() => import('../../../components/explainers/ExplainerPage'));
 
 const steps: StepConfig[] = [
     {

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Scrollama, Step } from 'react-scrollama';
-import SideBySideLayout from '../../layouts/SideBySideLayout';
-import TextLayout from '../../layouts/TextLayout';
+import SideBySideLayout from '../layouts/SideBySideLayout';
+import TextLayout from '../layouts/TextLayout';
 
-import { Layout, StepConfig } from '../../../models/explainer1/propmodel';
+import { Layout, StepConfig } from '../../models/explainer1/propmodel';
 
 
 type ExplainerPageProps = {
